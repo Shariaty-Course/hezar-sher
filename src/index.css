@@ -11,12 +11,17 @@ body {
     direction: rtl;
 }
 
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-        monospace;
+button {
+    font-family: rezvan;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 a {
     text-decoration: none;
     color: black;
+}
+
+p {
+    line-height: 25px;
 }
