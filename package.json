@@ -43,6 +43,6 @@
     },
     "lint-staged": {
         "*.js": "eslint --cache --fix",
-        "*.js, *.json": "yarn lint:fix"
+        "*.js, *.json, *.css": "yarn lint:fix"
     }
 }
