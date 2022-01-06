@@ -1,4 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import Navbar from "src/components/navbar";
 import { routes } from "src/consts/routes";
 import styles from "./home.module.css";
@@ -13,6 +14,9 @@ function HomePage() {
 
     return (
         <div className={styles.container}>
+            <Helmet>
+                <title>هزار شعر</title>
+            </Helmet>
             <div>
                 <div className={styles.header}>
                     <Link to="/#">
