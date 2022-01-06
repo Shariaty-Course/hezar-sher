@@ -7,7 +7,7 @@ import gathering from "src/assets/gathering.png";
 import Button from "src/components/button";
 import blocks from "src/assets/blocks.png";
 
-function Home() {
+function HomePage() {
     const navigate = useNavigate();
     const { faal, ganjineh } = routes;
 
@@ -58,4 +58,4 @@ function Home() {
     );
 }
 
-export default Home;
+export default HomePage;
