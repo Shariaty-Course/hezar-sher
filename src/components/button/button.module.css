@@ -10,3 +10,14 @@
     box-shadow: 0px 4px 5px rgba(196, 196, 196, 0.4);
     cursor: pointer;
 }
+
+.secondary {
+    margin-top: 25px;
+    background-color: #dfe9f3;
+    border-radius: 10px 0px;
+    border: none;
+    font-size: 16px;
+    padding: 10px;
+    min-width: 160px;
+    cursor: pointer;
+}
