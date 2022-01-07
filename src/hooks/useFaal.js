@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { makeCouplets } from "src/helpers/verses";
+import { makeCouplets, getInterpretation } from "src/helpers/verses";
 
 function useFaal() {
     const [poemTitle, setPoemTitle] = useState("");
@@ -18,11 +18,10 @@ function useFaal() {
             .then(({ data }) => {
                 const { title, verses, recitations } = data;
                 setPoemTitle(title);
-                setCouplets(makeCouplets(verses));
+                const couplets = makeCouplets(verses);
+                setCouplets(couplets);
                 setAudioURL(recitations[0].mp3Url);
-
-                // Set interpretation here
-                setInterpretation("");
+                setInterpretation(getInterpretation(couplets));
             });
     });
 
