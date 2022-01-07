@@ -9,10 +9,6 @@ function useFaal() {
     const [interpretation, setInterpretation] = useState("");
 
     useEffect(() => {
-        if (poemTitle) {
-            return;
-        }
-
         axios
             .get("https://ganjgah.ir/api/ganjoor/hafez/faal")
             .then(({ data }) => {
@@ -23,7 +19,7 @@ function useFaal() {
                 setAudioURL(recitations[0].mp3Url);
                 setInterpretation(getInterpretation(couplets));
             });
-    });
+    }, []);
 
     return { poemTitle, couplets, audioURL, interpretation };
 }
