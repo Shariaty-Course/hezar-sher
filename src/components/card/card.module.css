@@ -1,0 +1,12 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 297px;
+    width: 187px;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0px 5px 4px rgba(183, 183, 183, 0.87);
+    text-align: center;
+    cursor: pointer;
+}
