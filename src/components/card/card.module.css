@@ -4,8 +4,10 @@
     height: 297px;
     width: 187px;
     padding: 0;
+    margin-left: 80px;
     overflow: hidden;
     border-radius: 15px;
+    background-color: white;
     box-shadow: 0px 5px 4px rgba(183, 183, 183, 0.87);
     text-align: center;
     cursor: pointer;
