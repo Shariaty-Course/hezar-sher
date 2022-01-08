@@ -1,0 +1,30 @@
+.container {
+    will-change: transform;
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    direction: ltr;
+    left: 0px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-bottom: 60px;
+    align-items: flex-end;
+    bottom: 0;
+    z-index: 3;
+}
+
+.cards {
+    display: flex;
+    min-height: 350px;
+    align-items: center;
+    padding-left: 125px;
+    transition-duration: 0.5s;
+}
+
+.buttons {
+    display: flex;
+    position: absolute;
+    z-index: 3;
+    left: 0;
+}
