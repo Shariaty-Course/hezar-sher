@@ -21,3 +21,25 @@
     min-width: 160px;
     cursor: pointer;
 }
+
+.round {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 25px;
+    background-color: #6788be;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    color: white;
+    cursor: pointer;
+    border: none;
+    font-size: 20px;
+    font-weight: bolder;
+    padding-bottom: 6px;
+}
+
+.round:disabled {
+    background-color: rgba(103, 136, 190, 0.7);
+    cursor: not-allowed;
+}
