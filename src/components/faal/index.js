@@ -1,6 +1,7 @@
 import styles from "./faal.module.css";
 import Button from "src/components/button";
 import Loading from "src/components/loading";
+import Poem from "src/components/poem";
 
 function Faal(props) {
     const { title, couplets, audioURL, interpretation, onBackButtonClick } =
@@ -13,28 +14,7 @@ function Faal(props) {
             ) : (
                 <>
                     <div className={styles.poemContainer}>
-                        <p className={styles.title}>{title}:</p>
-                        <div className={styles.poem}>
-                            {couplets.map((couplet, coupletIndex) => {
-                                return (
-                                    <div
-                                        key={`couplet-${coupletIndex}`}
-                                        className={styles.couplet}
-                                    >
-                                        {couplet.map((verse, verseIndex) => {
-                                            return (
-                                                <div
-                                                    key={`verse-${coupletIndex}-${verseIndex}`}
-                                                    className={styles.verse}
-                                                >
-                                                    {verse}
-                                                </div>
-                                            );
-                                        })}
-                                    </div>
-                                );
-                            })}
-                        </div>
+                        <Poem title={title} couplets={couplets} />
                         <audio src={audioURL} controls></audio>
                     </div>
                     <div className={styles.interpretationContainer}>
