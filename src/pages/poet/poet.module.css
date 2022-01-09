@@ -37,7 +37,8 @@
     border-width: 1px;
     border-color: #99c4ef;
     border-style: solid;
-    min-height: 291px;
+    height: 291px;
+    overflow-y: auto;
     width: 41%;
     right: 0px;
     top: calc(50vh - 100px);
