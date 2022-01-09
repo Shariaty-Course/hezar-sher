@@ -6,8 +6,13 @@ import usePoetsScroller from "src/hooks/usePoetsScroller";
 import Loading from "src/components/loading";
 
 function PoetScroller(props) {
-    const { scrollPosition, onScrollRightClick, onScrollLeftClick } =
-        usePoetsScroller();
+    const {
+        scrollPosition,
+        cardsContainer,
+        getWidth,
+        onScrollRightClick,
+        onScrollLeftClick,
+    } = usePoetsScroller();
 
     const { poets } = props;
     const { shaer } = routes;
@@ -21,6 +26,7 @@ function PoetScroller(props) {
                     <div
                         className={styles.cards}
                         style={{ transform: `translateX(${scrollPosition}px)` }}
+                        ref={cardsContainer}
                     >
                         {poets.map((poet) => {
                             const { id, name, image } = poet;
@@ -45,6 +51,12 @@ function PoetScroller(props) {
                             type="round"
                             title=">"
                             onClick={onScrollRightClick}
+                            disabled={
+                                scrollPosition < 0 &&
+                                getWidth(cardsContainer.current) +
+                                    (scrollPosition - window.innerWidth) <=
+                                    0
+                            }
                         />
                     </div>
                 </>

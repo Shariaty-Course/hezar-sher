@@ -1,7 +1,16 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useRef } from "react";
 
 function usePoetsScroller() {
     const [scrollPosition, setScrollPosition] = useState(0);
+    const cardsContainer = useRef(null);
+
+    const getWidth = useCallback((elementRefCurrent) => {
+        if (elementRefCurrent !== null) {
+            return elementRefCurrent.offsetWidth;
+        }
+
+        return 0;
+    }, []);
 
     const onScrollRightClick = useCallback(() => {
         setScrollPosition(
@@ -19,6 +28,8 @@ function usePoetsScroller() {
 
     return {
         scrollPosition,
+        cardsContainer,
+        getWidth,
         onScrollRightClick,
         onScrollLeftClick,
     };
