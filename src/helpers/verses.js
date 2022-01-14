@@ -22,6 +22,7 @@ export function getInterpretation(couplets) {
                 }
             }
         }
+        return true;
     });
 
     return thePoem.interpretation;
