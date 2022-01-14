@@ -14,7 +14,7 @@ export function makeCouplets(verses) {
 }
 
 export function getInterpretation(couplets) {
-    const thePoem = [];
+    var thePoem = [];
     
     thePoem = hafezPoems.find((each) => {
         for (let i = 0; i < couplets.length; i++) {
